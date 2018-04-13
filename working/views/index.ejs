@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Reminders</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <h1>My personal blog</h1>
+<!-- the ul is needed to display the notes in the databse in bulletpoint -->
+  <ul class="quotes">
+  <% for(var i=0; i<quotes.length; i++) {%>
+    <li class="quote">
+      <span><%= quotes[i].name %></span>
+      <span><%= quotes[i].quote %></span>
+    </li>
+  <% } %>
+  </ul>
+
+  <h2>Insert a post</h2>
+<!--this is the form that the user can input their name and text -->
+  <form action="/notes" method="POST">
+    <input type="text" placeholder="name" name="name">
+    <input type="text" placeholder="your note" name="quote">
+    <button type="submit">Insert</button>
+  </form>
+
+  <div>
+      
+      
+    <h2>Your last post was replaced with a preset one</h2>
+    <button id="update"> Replace </button>
+  </div>
+
+  <div>
+      
+    <h2>Delete the replaced post</h2>
+    <button id="delete"> Delete the note </button>
+  </div>
+
+  <script src="main.js"></script>
+
+</body>
+</html>

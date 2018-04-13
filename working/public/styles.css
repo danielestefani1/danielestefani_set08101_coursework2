@@ -1,0 +1,15 @@
+html {
+  font-size: 25px;
+}
+
+.quote {
+  margin-top: 0.8em;
+}
+
+.quote > span:first-child {
+  font-weight: bold
+}
+
+.quote > span:first-child:after {
+  content:':'
+}
